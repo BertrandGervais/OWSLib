@@ -214,7 +214,7 @@ class WebProcessingService(object):
             rootElement = reader.readFromString(xml)
         else:
             # read from server
-            rootElement = reader.readFromUrl(self.url, identifier)
+            rootElement = reader.readFromUrl(self.url, identifier, username=self.username, password=self.password)
             
         log.info(element_to_string(rootElement))
 
